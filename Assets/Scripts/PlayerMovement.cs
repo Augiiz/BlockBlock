@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.IO;
+
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -33,10 +33,6 @@ public class PlayerMovement : MonoBehaviour
             FindObjectOfType<GameManager>().EndGame();
         }
 
-        if (Input.GetKey("esc"))
-        {
-            SceneManager.LoadScene(0);
-        }
     }
 
 
