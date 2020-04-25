@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.IO;
+using System;
 
 public class LevelComplete : MonoBehaviour
 {
@@ -12,13 +13,24 @@ public class LevelComplete : MonoBehaviour
     }
     public void SaveFuckingLevelLmao()
     {
-        File.Delete(Application.persistentDataPath + "/gay.xd");
-        using (System.IO.StreamWriter file =
-            new System.IO.StreamWriter(Application.persistentDataPath + "/gay.xd", true))
+        string oldLevel = "0";
+
+        if (File.Exists(Application.persistentDataPath + "/gay.xd"))
         {
-            int levelL0L = SceneManager.GetActiveScene().buildIndex;
-            file.WriteLine(levelL0L);
+            using (StreamReader sr = new StreamReader(Application.persistentDataPath + "/gay.xd"))
+            {
+                oldLevel = sr.ReadLine();
+            }
         }
+
+
+        int newLevel = SceneManager.GetActiveScene().buildIndex;
+
+        if (newLevel > Convert.ToInt32(oldLevel))
+        {
+            File.WriteAllText(Application.persistentDataPath + "/gay.xd", Convert.ToString(newLevel));
+        }
+
     }
     public void BACKTHEFUCKOFF()
     {
