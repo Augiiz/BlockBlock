@@ -6,19 +6,16 @@ using UnityEngine.UI;
 
 public class ScoreTime : MonoBehaviour
 {
-    double labaiDidelisBYBYS = 0;
+    double score = 0;
     public Text scoreText;
-    // Update is called once per frame
-    // pajarskas gano karve
     void Update()
     {
         
-        labaiDidelisBYBYS += Convert.ToDouble(Time.deltaTime) + 0.05;
-        if (labaiDidelisBYBYS % 1 >= 0.5)
+        score += Convert.ToDouble(Time.deltaTime) + 0.05;
+        if (score % 1 >= 0.5)
         {
-            scoreText.text = "matorkos mazas peepee";
-            scoreText.text = Math.Round(labaiDidelisBYBYS).ToString();
+            scoreText.text = "";
+            scoreText.text = Math.Round(score).ToString();
         }
-        //pusk nx wololo
     }
 }
