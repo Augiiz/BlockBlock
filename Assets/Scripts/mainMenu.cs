@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -45,15 +45,16 @@ public class mainMenu : MonoBehaviour
                 level = sr.ReadLine();
             }
         }
-        GameObject l2 = GameObject.FindWithTag("btn2");
-        GameObject l3 = GameObject.FindWithTag("btn3");
-        GameObject l4 = GameObject.FindWithTag("btn4");
-        GameObject l5 = GameObject.FindWithTag("btn5");
 
-        if (Convert.ToInt32(level) < 1) l2.SetActive(false);
-        if (Convert.ToInt32(level) < 2) l3.SetActive(false);
-        if (Convert.ToInt32(level) < 3) l4.SetActive(false);
-        if (Convert.ToInt32(level) < 4) l5.SetActive(false);
+        GameObject l2 = GameObject.Find("level2Button");
+        GameObject l3 = GameObject.Find("level3Button");
+        GameObject l4 = GameObject.Find("level4Button");
+        GameObject l5 = GameObject.Find("level5Button");
+
+        if (Convert.ToInt32(level) < 1 && l2.activeSelf) l2.SetActive(false);
+        if (Convert.ToInt32(level) < 2 && l3.activeSelf) l3.SetActive(false);
+        if (Convert.ToInt32(level) < 3 && l4.activeSelf) l4.SetActive(false);
+        if (Convert.ToInt32(level) < 4 && l5.activeSelf) l5.SetActive(false);
 
     }
 
@@ -88,6 +89,7 @@ public class mainMenu : MonoBehaviour
             File.Delete(Application.persistentDataPath + "/saveFile.xd");
         }
         level = "0";
+
         checkGameProgress();
     }
     public void QuitGame()
