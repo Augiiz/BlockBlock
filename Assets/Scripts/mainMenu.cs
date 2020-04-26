@@ -7,6 +7,7 @@ using System;
 using TMPro;
 using UnityEngine.UI;
 
+
 public class mainMenu : MonoBehaviour
 {
     string level = "0";
@@ -23,9 +24,9 @@ public class mainMenu : MonoBehaviour
     
     public void loadGame()
     {
-        if (File.Exists(Application.persistentDataPath + "/gay.xd"))
+        if (File.Exists(Application.persistentDataPath + "/saveFile.xd"))
         {
-            using (StreamReader sr = new StreamReader(Application.persistentDataPath + "/gay.xd"))
+            using (StreamReader sr = new StreamReader(Application.persistentDataPath + "/saveFile.xd"))
             {
                 level = sr.ReadLine();
             }
@@ -33,33 +34,33 @@ public class mainMenu : MonoBehaviour
         }
         else level = "0";
     }
+    
 
-    public void checkGameProgressNX()
+    public void checkGameProgress()
     {
-        if (File.Exists(Application.persistentDataPath + "/gay.xd"))
+        if (File.Exists(Application.persistentDataPath + "/saveFile.xd"))
         {
-            using (StreamReader sr = new StreamReader(Application.persistentDataPath + "/gay.xd"))
+            using (StreamReader sr = new StreamReader(Application.persistentDataPath + "/saveFile.xd"))
             {
                 level = sr.ReadLine();
             }
         }
+        GameObject l2 = GameObject.FindWithTag("btn2");
+        GameObject l3 = GameObject.FindWithTag("btn3");
+        GameObject l4 = GameObject.FindWithTag("btn4");
+        GameObject l5 = GameObject.FindWithTag("btn5");
 
-    }
+        if (Convert.ToInt32(level) < 1) l2.SetActive(false);
+        if (Convert.ToInt32(level) < 2) l3.SetActive(false);
+        if (Convert.ToInt32(level) < 3) l4.SetActive(false);
+        if (Convert.ToInt32(level) < 4) l5.SetActive(false);
 
-
-    public void loadLevel1()
-    {
-        SceneManager.LoadScene("level01");
     }
 
 
     public void loadLevel2()
     {
-        TextMeshProUGUI txt;
-        if (Convert.ToInt32(level) < 1)
-        {
-            
-        }
+        if (Convert.ToInt32(level) < 1) { }
         else SceneManager.LoadScene("level02");
     }
     public void loadLevel3()
@@ -77,40 +78,17 @@ public class mainMenu : MonoBehaviour
         if (Convert.ToInt32(level) < 4) { }
         else SceneManager.LoadScene("level05");
     }
-    public void loadLevel6()
-    { 
-        if (Convert.ToInt32(level) < 5)  { }
-        else SceneManager.LoadScene("level06");
-    }
-    public void loadLevel7()
-    {
-        if (Convert.ToInt32(level) < 6) { }
-        else SceneManager.LoadScene("level07");
-    }
-    public void loadLevel8()
-    {
-        if (Convert.ToInt32(level) < 7) { }
-        else SceneManager.LoadScene("level08");
-    }
-    public void loadLevel9()
-    {
-        if (Convert.ToInt32(level) < 8) { }
-        else SceneManager.LoadScene("level09");
-    }
-    public void loadLevel10()
-    {
-        if (Convert.ToInt32(level) < 9) { }
-        else SceneManager.LoadScene("level10");
-    }
+
 
 
     public void deleteLoadFile()
     {
-        if (File.Exists(Application.persistentDataPath + "/gay.xd"))
+        if (File.Exists(Application.persistentDataPath + "/saveFile.xd"))
         {
-            File.Delete(Application.persistentDataPath + "/gay.xd");
+            File.Delete(Application.persistentDataPath + "/saveFile.xd");
         }
         level = "0";
+        checkGameProgress();
     }
     public void QuitGame()
 

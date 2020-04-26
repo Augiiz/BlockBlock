@@ -11,45 +11,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Level01.unity
     guid: 853d88c7971383341975e8179045bb60
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Levels/Level02.unity
     guid: 5fb2a2071ca5fe144a8a0311986c9d48
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Levels/Level03.unity
     guid: 8013518fafdbac6488b893ea56614f3a
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Levels/Level04.unity
     guid: 1e72dbfa685567e4dac06068167ec9bd
   - enabled: 1
     path: Assets/Levels/Level05.unity
     guid: 5f20604a89303554e9d6821f5fc2c698
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Levels/Endless.unity
     guid: 088fbf41b2432bc44af2e1fcd70a3836

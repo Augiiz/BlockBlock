@@ -8,14 +8,38 @@ public class ScoreTime : MonoBehaviour
 {
     double score = 0;
     public Text scoreText;
+    string timeDiff = "0";
+    public static bool GameIsPaused = false;
     void Update()
     {
-        
-        score += Convert.ToDouble(Time.deltaTime) + 0.05;
-        if (score % 1 >= 0.5)
+        if (!GameIsPaused)
         {
-            scoreText.text = "";
-            scoreText.text = Math.Round(score).ToString();
+            score += Convert.ToDouble(Time.deltaTime) + 0.05;
         }
+        else
+        {
+            score += Convert.ToDouble(Time.deltaTime);
+        }   
+
+        if (score % 1 >= 0.5 && !GameIsPaused)
+        {
+            scoreText.text = Math.Round(score - Convert.ToDouble(timeDiff)).ToString();
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (GameIsPaused)
+            {
+                timeDiff = Convert.ToString(Convert.ToDouble(scoreText.text) - Convert.ToDouble(timeDiff));
+                GameIsPaused = false;
+            }
+            else
+            {
+                timeDiff = Convert.ToString(Convert.ToDouble(timeDiff) + Convert.ToDouble(scoreText.text));
+                GameIsPaused = true;
+            }
+        }
+
     }
 }

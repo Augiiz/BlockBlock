@@ -4,7 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Obstacle
+  - level5Button
+  - btn5
+  - btn4
+  - btn3
+  - btn2
   layers:
   - Default
   - TransparentFX

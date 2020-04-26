@@ -11,13 +11,13 @@ public class LevelComplete : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    public void SaveFuckingLevelLmao()
-    {
+    public void SaveLevel()
+    { 
         string oldLevel = "0";
 
-        if (File.Exists(Application.persistentDataPath + "/gay.xd"))
+        if (File.Exists(Application.persistentDataPath + "/saveFile.xd"))
         {
-            using (StreamReader sr = new StreamReader(Application.persistentDataPath + "/gay.xd"))
+            using (StreamReader sr = new StreamReader(Application.persistentDataPath + "/saveFile.xd"))
             {
                 oldLevel = sr.ReadLine();
             }
@@ -28,11 +28,11 @@ public class LevelComplete : MonoBehaviour
 
         if (newLevel > Convert.ToInt32(oldLevel))
         {
-            File.WriteAllText(Application.persistentDataPath + "/gay.xd", Convert.ToString(newLevel));
+            File.WriteAllText(Application.persistentDataPath + "/saveFile.xd", Convert.ToString(newLevel));
         }
 
     }
-    public void BACKTHEFUCKOFF()
+    public void backToMenu()
     {
         SceneManager.LoadScene(0);
     }

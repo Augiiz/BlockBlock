@@ -14,7 +14,6 @@ public class BlockMovement : MonoBehaviour
     void FixedUpdate()
     {
         rb.AddForce(0, 0, forwardForce * Time.deltaTime);
-
     }
 
 }
