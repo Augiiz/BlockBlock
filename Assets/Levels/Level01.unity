@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -2287,6 +2287,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1073171216848617841, guid: f9cc18d6d1e100c4c96f7977040b5658,
+        type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 1073171216848617843, guid: f9cc18d6d1e100c4c96f7977040b5658,
         type: 3}
       propertyPath: m_Name
@@ -2352,6 +2357,21 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1015690184}
+    - target: {fileID: 1073171216848617847, guid: f9cc18d6d1e100c4c96f7977040b5658,
+        type: 3}
+      propertyPath: offset.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073171216848617847, guid: f9cc18d6d1e100c4c96f7977040b5658,
+        type: 3}
+      propertyPath: offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073171216848617847, guid: f9cc18d6d1e100c4c96f7977040b5658,
+        type: 3}
+      propertyPath: offset.z
+      value: -5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9cc18d6d1e100c4c96f7977040b5658, type: 3}
 --- !u!1001 &1444253992824639425
@@ -2365,6 +2385,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1444253991810284552, guid: fe5b1ef42eb3d2443b05bc429a762156,
+        type: 3}
+      propertyPath: forwardForce
+      value: 7000
       objectReference: {fileID: 0}
     - target: {fileID: 1444253991810284553, guid: fe5b1ef42eb3d2443b05bc429a762156,
         type: 3}
@@ -2438,7 +2463,17 @@ PrefabInstance:
     - target: {fileID: 3569190796919190648, guid: ada0b7bd06f6b194a968dd743b59af99,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 300
+      value: 168.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 3569190796919190648, guid: ada0b7bd06f6b194a968dd743b59af99,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 160.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3569190796919190648, guid: ada0b7bd06f6b194a968dd743b59af99,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 93.3
       objectReference: {fileID: 0}
     - target: {fileID: 3569190796919190649, guid: ada0b7bd06f6b194a968dd743b59af99,
         type: 3}
